@@ -1,22 +1,86 @@
 const resumenPdf = document.querySelector(`.contacto__resumen__descargar`)
-
-// Función para abrir el PDF en una nueva pestaña
-resumenPdf.addEventListener('click', () => {
-    const pdfUrl = './public/docs/Comp_97631466013.pdf'; // Ruta del PDF
-    window.open(pdfUrl, '_blank'); // Abre en una nueva pestaña
-});
-
 const portapapeles = document.querySelector('.portapapeles');
+const descargar_cv = document.querySelector(`.descargar_cv`)
+const modal__button = document.getElementById("modal__button")
+const contacto__formulario_boton = document.getElementById("contacto__formulario--boton")
 
-// Función para copiar el contenido del div
-portapapeles.addEventListener('click', () => {
-    const texto = "juanmaf236@gmail.com"; // Obtiene el texto del div
+function mostrarAlerta(mensaje) {
+    document.getElementById("alertMessage").innerText = mensaje;
+    document.getElementById("customAlert").classList.add("show");
+}
 
+function cerrarAlerta() {
+    document.getElementById("customAlert").classList.remove("show");
+}
+
+const descargarPdf = () => {
+    // Función para abrir el PDF en una nueva pestaña
+    const pdfUrl = './public/docs/Comp_97631466013.pdf'; // Ruta del PDF
+    window.open(pdfUrl, '_blank');
+    // Abre en una nueva pestaña
+}
+
+const copiarAlPortapapeles = (textoACopiar) => {
+    const texto = textoACopiar;
     navigator.clipboard.writeText(texto)
         .then(() => {
-            alert('Texto copiado: ' + texto); // Muestra un mensaje de éxito
+            mostrarAlerta("mail copiado con éxito en portapapeles")
         })
         .catch((error) => {
+            mostrarAlerta("Error al copiar el mail al portapapeles")
             console.error('Error al copiar: ', error); // Maneja errores
         });
-});
+}
+
+const guardarEnElLocalStore = (e) => {
+    localStorage.setItem("Email", "Email enviado correctamente")
+}
+
+const recuperarLocalStore = () => {
+    let mail = localStorage.getItem("Email");
+    return mail
+}
+
+const eliminarLocalStore = () => {
+    localStorage.removeItem("Email");
+}
+
+const EmailEnviado = () => {
+    let mensajeGuardado = recuperarLocalStore();
+    if (mensajeGuardado) {
+        mostrarAlerta(mensajeGuardado);
+    }
+}
+
+const aceptarModal = (e) => {
+    e.preventDefault()
+    cerrarAlerta()
+    eliminarLocalStore();
+}
+
+const init = () => {
+    EmailEnviado();
+
+    resumenPdf.addEventListener('click', () => {
+        descargarPdf();
+    });
+
+    descargar_cv.addEventListener("click", () => {
+        descargarPdf();
+    });
+
+    // Función para copiar el contenido del div
+    portapapeles.addEventListener('click', () => {
+        copiarAlPortapapeles("juanmaf236@gmail.com")
+    });
+
+    modal__button.addEventListener("click", aceptarModal)
+
+    contacto__formulario_boton.addEventListener("click", guardarEnElLocalStore)
+}
+
+
+
+init();
+
+

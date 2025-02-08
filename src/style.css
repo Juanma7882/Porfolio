@@ -84,7 +84,7 @@
   border: 0;
   list-style: none;
   color: var(--federal9-light-cyan);
-  /* border: 1px solid red; */
+  /* border: 1px solid green; */
 }
 
 body #app {
@@ -93,7 +93,6 @@ body #app {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
   background-color: var(--black);
 }
 
@@ -178,9 +177,9 @@ a {
   height: 100%;
   cursor: pointer;
 }
-
+/* ! main  //////////////////////////////////////////////////  */
 #main_inicio {
-  width: 700px;
+  width: 80%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -295,6 +294,7 @@ a {
   /* justify-content: center; */
   align-items: center;
   gap: 2rem;
+  border-radius: 10px;
 }
 
 .proyectos__icons {
@@ -330,7 +330,8 @@ a {
   flex-direction: column;
   border: 1px solid var(--federal9-light-cyan);
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
 }
 .technologies__list {
   display: grid;
@@ -355,7 +356,9 @@ a {
   width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
   margin: 4rem 0rem 4rem 0rem;
   /* background-color: #0096c7; */
 }
@@ -363,7 +366,6 @@ a {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 4rem;
 }
 .contacto__contenido {
   display: flex;
@@ -372,6 +374,7 @@ a {
   gap: 1rem;
   border: 1px solid var(--federal8-non-photo-blue-2);
   border-radius: 10px;
+  width: 90%;
 }
 
 .contacto__formulario input {
@@ -389,14 +392,21 @@ a {
   padding: 1rem;
 }
 
-.contacto__formulario--boton {
+#contacto__formulario--boton {
   border-radius: 10px;
-  background-color: var(--federal9-light-cyan);
   color: var(--black);
   font-size: large;
   font-weight: 400;
   height: 2rem;
   margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--federal9-light-cyan);
+}
+#contacto__formulario--boton:hover {
+  background-color: white;
 }
 /* cambia a la seccion redes sociales */
 
@@ -435,7 +445,7 @@ a {
   cursor: pointer;
 }
 .contacto__redes__iconos div img {
-  margin: 2rem;
+  margin: 2rem 0rem;
 }
 .contacto__resumen {
   /* text-align: center; */
@@ -467,4 +477,154 @@ a {
 .contacto__resumen__descargar:active {
   background-color: transparent;
   border: 1px solid white;
+}
+
+/* !  modal  */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+/* Estilos para el contenedor del alert */
+.modal {
+  color: black;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+}
+#alertMessage {
+  color: black;
+}
+.modal button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal button:hover {
+  background: #0056b3;
+}
+
+/* Mostrar el modal */
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 964px) {
+  .technologies,
+  .contacto {
+    height: 100%;
+    margin: 4rem 0rem;
+  }
+  .technologies__list {
+    /* width: 80%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Proyectos__cards,
+  .technologies__cards_wrapper {
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .technologies__card {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contacto {
+    height: 110%;
+    padding: 5rem 0rem;
+  }
+  .contacto__contenedor {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+  .contacto__redes_resumen {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .technologies__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  #main_inicio,
+  #sobreMi,
+  #contacto,
+  #technologies,
+  #proyectos {
+    width: 95%;
+    max-width: 95%;
+  }
+  header {
+    top: calc(100vh - 75px);
+    height: 78px;
+    background-color: var(--black);
+  }
+  .nav {
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    border-radius: 0px;
+    border-bottom: 25px solid var(--black);
+  }
+  #main_inicio h1 {
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+  }
+  #main_inicio h2 {
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+  }
+  #main_inicio ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_inicio li img {
+    height: 3rem;
+    margin-top: 1rem;
+  }
+  .technologies__item img {
+    height: 4rem;
+  }
+  .proyectos__icons img {
+    height: 3rem;
+  }
 }
