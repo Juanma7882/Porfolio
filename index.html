@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- iconos  sacados de icons 8 -->
@@ -133,8 +137,71 @@
           <div class="Proyectos__cards">
             <div class="proyectos__card">
               <h3>Aplicación del clima</h3>
-              <div class="proyecto__img">
-                <img src="/src/img/proyecto.png" alt="" />
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper proyecto__img">
+                  <img
+                    src="/src/img/dispositivos/notebookclima1.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/dispositivos/notebookclima2.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <div class="swiper-slide">
+                    <img src="/src/img/dispositivos/tableclima1.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/dispositivos/tableclima2.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/dispositivos/celularclima1.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/dispositivos/celularclima2.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/src/img/dispositivos/celularclima3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="proyectos__icons">
+                <div class="Proyectos__contenedor__img">
+                  <img
+                    class="Proyectos__contenedor--img"
+                    src="./src/img/icons/icons8-html-100.png"
+                    alt=""
+                  />
+                  <p class="Proyectos__contenedor--texto">Html</p>
+                </div>
+                <div class="Proyectos__contenedor__img">
+                  <img
+                    class="Proyectos__contenedor--img"
+                    src="./src/img/icons/icons8-css-100.png"
+                    alt=""
+                  />
+                  <p class="Proyectos__contenedor--texto">css</p>
+                </div>
+                <div class="Proyectos__contenedor__img">
+                  <img
+                    class="Proyectos__contenedor--img"
+                    src="./src/img/icons/icons8-javascript-100.png"
+                    alt=""
+                  />
+                  <p class="Proyectos__contenedor--texto">JavaScript</p>
+                </div>
+                <div class="Proyectos__contenedor__img">
+                  <img
+                    class="Proyectos__contenedor--img"
+                    src="./src/img/icons/icons8-vite-100.png"
+                    alt=""
+                  />
+                  <p class="Proyectos__contenedor--texto">Vite</p>
+                </div>
               </div>
               <p>
                 Esta es una aplicación del clima desarrollada con JavaScript.
@@ -142,17 +209,67 @@
                 adicional, además de proporcionar el pronóstico por horas y para
                 los próximos seis días de la semana consumiendo una varias apis.
               </p>
-              <div class="proyectos__icons">
-                <img src="./src/img/icons/icons8-html-100.png" alt="" />
-                <img src="./src/img/icons/icons8-css-100.png" alt="" />
-                <img src="./src/img/icons/icons8-javascript-100.png" alt="" />
-                <img src="./src/img/icons/icons8-vite-100.png" alt="" />
+              <div class="proyecto__contenedor__botones">
+                <a
+                  href="https://clima-cyan.vercel.app/"
+                  class="proyecto__botones"
+                  target="_blank"
+                  >Ir a la pagina</a
+                >
+                <a
+                  href="https://github.com/Juanma7882/clima"
+                  target="_blank"
+                  class="proyecto__botones"
+                  >Ir a github</a
+                >
               </div>
             </div>
             <div class="proyectos__card">
               <h3>Gestor de concesionaria</h3>
-              <div class="proyecto__img">
-                <img src="/src/img/proyecto.png" alt="" />
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper proyecto__img">
+                  <img
+                    src="/src/img/concesionaria/imgInicio.jpg"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/concesionaria/imgMenu.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/concesionaria/vehiculos.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/concesionaria/Agregar Vechiculo.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="proyectos__icons">
+                <div class="Proyectos__contenedor__img">
+                  <img
+                    class="Proyectos__contenedor--img"
+                    src="./src/img/icons/icons8-c-sharp-logotipo-100.png"
+                    alt=""
+                  />
+                  <p class="Proyectos__contenedor--texto">C#</p>
+                </div>
+                <div class="Proyectos__contenedor__img">
+                  <img
+                    class="Proyectos__contenedor--img"
+                    src="./src/img/icons/icons8-microsoft-sql-server-100.png"
+                    alt=""
+                  />
+                  <p class="Proyectos__contenedor--texto">SQL Server</p>
+                </div>
               </div>
               <p>
                 Este proyecto permite gestionar una concesionaria de vehículos,
@@ -161,23 +278,73 @@
                 bases de datos y pruebas unitarias. Es una aplicación
                 completamente funcional.
               </p>
-              <div class="proyectos__icons">
-                <div class="proyectos__icons">
-                  <img
-                    src="./src/img/icons/icons8-microsoft-sql-server-100.png"
-                    alt=""
-                  />
-                  <img
-                    src="./src/img/icons/icons8-c-sharp-logotipo-100.png"
-                    alt=""
-                  />
-                </div>
+              <div class="proyecto__contenedor__botones">
+                <!-- <a href="pagina1.html" class="proyecto__botones"
+                  >Mostrar video</a
+                > -->
+                <a
+                  href="https://github.com/Juanma7882/Concecionaria-wf"
+                  class="proyecto__botones"
+                  target="_blank"
+                  >Ir a github</a
+                >
               </div>
             </div>
+
             <div class="proyectos__card">
               <h3>pygame</h3>
-              <div class="proyecto__img">
-                <img src="/src/img/proyecto.png" alt="" />
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper proyecto__img">
+                  <img
+                    src="/src/img/pygame/mainGame.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+
+                  <img
+                    src="/src/img/pygame/level1game.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/pygame/level2game.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/pygame/level3game.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/pygame/gamepause.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/pygame/gameTop5.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                  <img
+                    src="/src/img/pygame/loseGame.png"
+                    alt=""
+                    class="swiper-slide"
+                  />
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="proyectos__icons">
+                <div class="Proyectos__contenedor__img">
+                  <img
+                    class="Proyectos__contenedor--img"
+                    src="./src/img/icons/icons8-python-100.png"
+                    alt=""
+                  />
+                  <p class="Proyectos__contenedor--texto">Python</p>
+                </div>
               </div>
               <p>
                 Este es un juego desarrollado en Python utilizando Pygame. Para
@@ -187,8 +354,16 @@
                 diferentes para ofrecer una experiencia más desafiante y
                 entretenida.
               </p>
-              <div class="proyectos__icons">
-                <img src="./src/img/icons/icons8-python-100.png" alt="" />
+              <div class="proyecto__contenedor__botones">
+                <!-- <a href="pagina1.html" class="proyecto__botones"
+                  >Mostrar video</a
+                > -->
+                <a
+                  href="https://github.com/Juanma7882/MiJuego"
+                  class="proyecto__botones"
+                  target="_blank"
+                  >Ir a github</a
+                >
               </div>
             </div>
           </div>
@@ -408,6 +583,7 @@
         </div>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
