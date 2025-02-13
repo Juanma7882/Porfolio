@@ -367,6 +367,7 @@ a {
   height: 100%; /* Ajusta la imagen al alto del contenedor */
   max-width: 100%;
   object-fit: cover;
+  object-fit: contain;
 }
 
 /* ! ///////////////  tecnologías ///////////////////////////  */
@@ -645,8 +646,26 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+  .proyectos__icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+  }
+  .Proyectos__contenedor--img {
+    height: 100%;
+  }
+  .proyectos__card {
+    width: 95%;
+  }
 }
 @media screen and (max-width: 500px) {
+  * {
+    font-size: smaller;
+  }
+  h2 {
+    font-size: medium;
+  }
+
   #main_inicio,
   #sobreMi,
   #contacto,
@@ -691,6 +710,6 @@ a {
     height: 4rem;
   }
   .proyectos__icons img {
-    height: 3rem;
+    /* height: 3rem; */
   }
 }
