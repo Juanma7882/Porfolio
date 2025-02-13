@@ -660,10 +660,13 @@ a {
 }
 @media screen and (max-width: 500px) {
   * {
-    font-size: smaller;
+    font-size: medium;
   }
   h2 {
-    font-size: medium;
+    font-size: large;
+  }
+  .Proyectos__contenedor--texto {
+    font-size: x-small;
   }
 
   #main_inicio,
@@ -709,7 +712,11 @@ a {
   .technologies__item img {
     height: 4rem;
   }
-  .proyectos__icons img {
-    /* height: 3rem; */
+  .proyecto__contenedor__botones {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .proyecto__botones {
+    width: auto;
   }
 }
