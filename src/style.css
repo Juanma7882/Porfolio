@@ -678,7 +678,7 @@ a {
     max-width: 95%;
   }
   header {
-    top: calc(100vh - 3.5rem);
+    top: calc(100dvh - 3.5rem);
     height: 78px;
     background-color: var(--black);
   }
