@@ -15,7 +15,7 @@ function cerrarAlerta() {
 
 const descargarPdf = () => {
     // Función para abrir el PDF en una nueva pestaña
-    const pdfUrl = './public/docs/Fernandez Juan cv.pdf'; // Ruta del PDF
+    const pdfUrl = '/docs/Fernandez Juan cv.pdf'; // Ruta del PDF
     window.open(pdfUrl, '_blank');
     // Abre en una nueva pestaña
 }
